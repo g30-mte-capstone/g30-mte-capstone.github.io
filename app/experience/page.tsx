@@ -40,7 +40,6 @@ const ExperiencePage: React.FC = () => {
         {typed && (
           <div>
             <hr className="w-full h-2 mb-4" />
-
             <p className="text-3xl font-bold mb-2">Education</p>
             <div className="mb-4">
               <div className="flex justify-between items-center">
@@ -56,16 +55,15 @@ const ExperiencePage: React.FC = () => {
                 <p className="text-lg mr-4">CGPA: 93.44%</p>
               </div>
             </div>
-
             <hr className="w-full h-2 mb-4" />
-
             <p className="text-3xl font-bold mb-4">Work Experience</p>
             <div className="mb-4">
               <div className="flex justify-between items-center">
                 <p className="text-2xl font-bold">Enstream LP</p>
                 <p className="text-lg">May. 2024 - Aug. 2024</p>
               </div>
-              <ul className="list-none mt-4 space-y-2 text-lg">
+              <ul className="list-none space-y-2 text-lg">
+                 <p className="italic text-xl">Software and Data Engineering Intern</p>
                 <li className="flex items-start">
                   <span className="blue-emph mr-2">{">"}</span>
                   <span>
@@ -100,7 +98,8 @@ const ExperiencePage: React.FC = () => {
                 <p className="text-2xl font-bold">Arctic AI</p>
                 <p className="text-lg">Sept. 2023 - Dec. 2023</p>
               </div>
-              <ul className="list-none mt-4 space-y-2 text-lg">
+              <ul className="list-none space-y-2 text-lg">
+                <p className="italic text-xl">Software Engineering Intern</p>
                 <li className="flex items-start">
                   <span className="blue-emph mr-2">{">"}</span>
                   <span>
@@ -130,7 +129,7 @@ const ExperiencePage: React.FC = () => {
               </ul>
             </div>
             <div className="mb-4">
-              <div className="flex justify-between items-center mb-2">
+              <div className="flex justify-between items-center">
                 <p className="text-2xl font-bold">Martinrea HFS</p>
                 <p className="text-lg">Jan. 2023 - April 2023</p>
               </div>
@@ -156,7 +155,7 @@ const ExperiencePage: React.FC = () => {
               </ul>
             </div>
             <div className="mb-4">
-              <div className="flex justify-between items-center mb-2">
+              <div className="flex justify-between items-center">
                 <p className="text-2xl font-bold">Dairy Queen Laurelwood</p>
                 <p className="text-lg">Jan. 2023 - April 2023</p>
               </div>
@@ -180,9 +179,7 @@ const ExperiencePage: React.FC = () => {
                 </li>
               </ul>
             </div>
-
             <hr className="w-full h-2 mb-4" />
-
             <p className="text-3xl font-bold mb-2">Projects</p>
             Coming soon...
           </div>
