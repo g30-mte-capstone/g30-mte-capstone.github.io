@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import { ReactTyped } from "react-typed";
+import { MdFileDownload } from "react-icons/md";
+import Tooltip from "@mui/material/Tooltip";
 
 const ExperiencePage: React.FC = () => {
   const [typed, setTyped] = useState(false);
@@ -8,17 +10,32 @@ const ExperiencePage: React.FC = () => {
   return (
     <>
       <div className="container mx-auto break-after-auto">
-        <p className="text-5xl font-bold mb-2">
-          <ReactTyped
-            strings={["Experience"]}
-            typeSpeed={100}
-            backSpeed={50}
-            backDelay={1000}
-            showCursor={false}
-            onBegin={() => setTyped(false)}
-            onComplete={() => setTyped(true)}
-          />
-        </p>
+        <div className="flex items-center justify-between mb-4">
+          <p className="text-5xl font-bold mb-2">
+            <ReactTyped
+              strings={["Experience"]}
+              typeSpeed={100}
+              backSpeed={50}
+              backDelay={1000}
+              showCursor={false}
+              onBegin={() => setTyped(false)}
+              onComplete={() => setTyped(true)}
+            />
+          </p>
+          {typed && (
+            <div>
+              <Tooltip title="Download Current Application Package">
+                <a
+                  href="./app.pdf"
+                  target="_blank"
+                  className="text-3xl hover:text-[var(--accent-blue-color)]"
+                >
+                  <MdFileDownload />
+                </a>
+              </Tooltip>
+            </div>
+          )}
+        </div>
 
         {typed && (
           <div>
@@ -46,7 +63,7 @@ const ExperiencePage: React.FC = () => {
             <div className="mb-4">
               <div className="flex justify-between items-center">
                 <p className="text-2xl font-bold">Enstream LP</p>
-                <p className="text-lg">May. 2024 - Sept. 2024</p>
+                <p className="text-lg">May. 2024 - Aug. 2024</p>
               </div>
               <ul className="list-none mt-4 space-y-2 text-lg">
                 <li className="flex items-start">
@@ -81,7 +98,7 @@ const ExperiencePage: React.FC = () => {
             <div className="mb-4">
               <div className="flex justify-between items-center">
                 <p className="text-2xl font-bold">Arctic AI</p>
-                <p className="text-lg">May. 2024 - Sept. 2024</p>
+                <p className="text-lg">Sept. 2023 - Dec. 2023</p>
               </div>
               <ul className="list-none mt-4 space-y-2 text-lg">
                 <li className="flex items-start">
@@ -105,13 +122,69 @@ const ExperiencePage: React.FC = () => {
                 <li className="flex items-start">
                   <span className="blue-emph mr-2">{">"}</span>
                   <span>
-                    Developed reusable codebase for database management
-                    and migration, secure authentication, and microservice
-                    standards to streamline application development.
+                    Developed reusable codebase for database management and
+                    migration, secure authentication, and microservice standards
+                    to streamline application development.
                   </span>
                 </li>
               </ul>
             </div>
+            <div className="mb-4">
+              <div className="flex justify-between items-center mb-2">
+                <p className="text-2xl font-bold">Martinrea HFS</p>
+                <p className="text-lg">Jan. 2023 - April 2023</p>
+              </div>
+              <ul className="list-none space-y-2 text-lg">
+                <p className="italic text-xl">Engineering Intern</p>
+                <li className="flex items-start">
+                  <span className="blue-emph mr-2">{">"}</span>
+                  <span>
+                    Oversaw production line camera vision project that
+                    determines correct machine-line part presence and
+                    orientation with OpenCV image processing, reducing
+                    production downtime by 1.14% and saving $60,000 per year.
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="red-emph mr-2">{">"}</span>
+                  <span>
+                    Scripted object detection and mask generation programs using
+                    OpenCV and NumPy, detecting loading accuracy for 47 distinct
+                    automotive components.
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <div className="mb-4">
+              <div className="flex justify-between items-center mb-2">
+                <p className="text-2xl font-bold">Dairy Queen Laurelwood</p>
+                <p className="text-lg">Jan. 2023 - April 2023</p>
+              </div>
+              <ul className="list-none space-y-2 text-lg">
+                <p className="italic text-xl">Team Member</p>
+                <li className="flex items-start">
+                  <span className="blue-emph mr-2">{">"}</span>
+                  <span>
+                    Managed teams of crew members in customer-care environment
+                    and mediated communication from a position of trust for the
+                    branch manager with service technicians, crew, and corporate
+                    staff.
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="red-emph mr-2">{">"}</span>
+                  <span>
+                    Oversaw recruitment, performance evaluation, and onboarding
+                    of 16 crew members.
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <hr className="w-full h-2 mb-4" />
+
+            <p className="text-3xl font-bold mb-2">Projects</p>
+            Coming soon...
           </div>
         )}
       </div>

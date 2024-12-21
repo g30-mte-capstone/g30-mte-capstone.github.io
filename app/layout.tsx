@@ -28,11 +28,10 @@ export default function RootLayout({
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            height: "95vh",
-            // overflow: "auto",
+            minHeight: "95vh",
           }}
         >
-          <div className="container mx-auto px-10">{children}</div>
+          <div className="container mx-auto p-10">{children}</div>
         </main>
       </body>
     </html>

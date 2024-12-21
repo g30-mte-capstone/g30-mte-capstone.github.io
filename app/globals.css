@@ -8,6 +8,8 @@
   --accent-red-color: #b01e1c;
   --accent-blue-color: #4f759b;
   --accent-yellow-color: #ffcc00;
+  --accent-purple-color: #685988;
+  --accent-green-color: #809848;
 
   --background: var(--light-color);
   --foreground: var(--dark-color);
