@@ -83,7 +83,8 @@ export default function ConeRain() {
             };
           }
 
-          let { x, y, vx, vy, bounces, mode, crawlDir } = cone;
+          let { x, y, vx, vy, bounces, crawlDir } = cone;
+          let mode: Cone["mode"] = cone.mode;
           vy += GRAVITY;
           x += vx;
           y += vy;
@@ -128,6 +129,8 @@ export default function ConeRain() {
   return (
     <div className="pointer-events-none fixed inset-0 z-50 overflow-hidden" aria-hidden>
       {cones.map((cone) => (
+        // Decorative overlay; next/image is unnecessary for this easter egg.
+        // eslint-disable-next-line @next/next/no-img-element
         <img
           key={cone.id}
           src="/cone.png"
