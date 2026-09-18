@@ -147,7 +147,7 @@ npm run dev
 
 You only need `npm install` again if someone changed the project’s packages, but it is safe to run.
 
-When it is ready, it will print a local address. Open [http://localhost:3000](http://localhost:3000) in your browser.
+When it is ready, it will print a local address. Open the link to the local deployment in your browser. This link will be logged into the terminal you ran the commands from.
 
 - Home should show your latest log
 - **Logs** in the header lists every published entry
@@ -220,30 +220,3 @@ Ask a teammate to glance at it. When it is merged into `master`, GitHub Actions 
 | Push | Upload commits to GitHub |
 | Pull | Download the latest from GitHub |
 | Pull request | A reviewable request to merge your branch into `master` |
-
----
-
-## If something breaks
-
-**`git pull` complains your branch has diverged**  
-Paste the full error to a teammate. Do not run reset/force commands unless someone who knows Git is helping.
-
-**`npm` is not found**  
-Install Node.js LTS and open a new terminal.
-
-**Port 3000 is already in use**  
-Something else is using the preview. Close the other terminal that ran `npm run dev`, or wait and try again.
-
-**My log does not show up**  
-- Filename must end in `.md` and must **not** start with `_`
-- You must be looking at [http://localhost:3000](http://localhost:3000) while `npm run dev` is running
-- Check the `date` and `title` lines at the top of the file still look like the template (quotes, dashes, and `---` fences)
-
-**I edited `master` by accident**  
-Make a branch from where you are (`git checkout -b log-fix-name`), push that branch, and open a PR. Ask before changing `master` directly.
-
----
-
-## Site colours (optional)
-
-Colours live in `app/styles.css`. You do not need this file to add a log.
