@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Sans } from "next/font/google";
 import { Footer, Header } from "@/components/layout";
+import ConeRain from "@/components/ConeRain";
 import { site } from "@/config/nav";
 import "./styles.css";
 import "./globals.css";
@@ -46,6 +47,7 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body className={`${plex.className} min-h-screen bg-bg text-fg antialiased`}>
+        <ConeRain />
         <div className="h-0.5 bg-accent" />
         <div className="mx-auto flex min-h-[calc(100vh-2px)] w-full max-w-3xl flex-col px-6">
           <Header />

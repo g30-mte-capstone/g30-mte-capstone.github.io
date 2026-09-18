@@ -15,8 +15,9 @@ body {
   background: var(--bg);
 }
 
-.cursor-blink {
-  animation: cursor-blink 1s step-end infinite;
+.pixel-cone {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
 }
 
 @keyframes cursor-blink {

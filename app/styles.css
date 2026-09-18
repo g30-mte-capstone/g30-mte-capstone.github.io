@@ -1,9 +1,9 @@
 /* Design tokens — change colours here to restyle the site. */
 
 :root {
-  --chalk: #f4f1ea;
+  --chalk: #f6f4f1;
   --grey: #2c2c2c;
-  --orange: #e06c2e;
+  --orange: #e78b22;
   --navy: #1b365d;
 
   --bg: var(--chalk);
