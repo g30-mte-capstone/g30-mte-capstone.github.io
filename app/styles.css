@@ -1,0 +1,26 @@
+/* Design tokens — change colours here to restyle the site. */
+
+:root {
+  --chalk: #f4f1ea;
+  --grey: #2c2c2c;
+  --orange: #e06c2e;
+  --navy: #1b365d;
+
+  --bg: var(--chalk);
+  --fg: var(--grey);
+  --muted: #5a5750;
+  --accent: var(--orange);
+  --accent-2: var(--navy);
+  --surface: #ebe6db;
+  --border: rgba(44, 44, 44, 0.14);
+}
+
+[data-theme="dark"] {
+  --bg: var(--grey);
+  --fg: var(--chalk);
+  --muted: #c4bfb4;
+  --accent: #ee8248;
+  --accent-2: #9bb0cb;
+  --surface: #363636;
+  --border: rgba(244, 241, 234, 0.14);
+}

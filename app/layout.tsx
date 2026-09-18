@@ -1,18 +1,39 @@
 import type { Metadata } from "next";
-import { PT_Serif } from "next/font/google";
-
-import { Header } from "../components/layout";
+import { IBM_Plex_Sans } from "next/font/google";
+import { Footer, Header } from "@/components/layout";
+import { site } from "@/config/nav";
+import "./styles.css";
 import "./globals.css";
 
-const ptSerif = PT_Serif({
+const plex = IBM_Plex_Sans({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "Leo You",
-  description: "Leo You's Portfolio Website",
+  title: {
+    default: site.title,
+    template: `%s · ${site.name}`,
+  },
+  description: site.description,
+  icons: {
+    icon: [],
+  },
 };
+
+const themeScript = `
+(function () {
+  try {
+    var stored = localStorage.getItem("theme");
+    var theme = stored === "dark" || stored === "light"
+      ? stored
+      : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", theme);
+  } catch (e) {
+    document.documentElement.setAttribute("data-theme", "light");
+  }
+})();
+`;
 
 export default function RootLayout({
   children,
@@ -20,19 +41,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={ptSerif.className}>
-        <Header />
-        <main
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            minHeight: "95vh",
-          }}
-        >
-          <div className="container mx-auto p-10">{children}</div>
-        </main>
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
+      <body className={`${plex.className} min-h-screen bg-bg text-fg antialiased`}>
+        <div className="h-0.5 bg-accent" />
+        <div className="mx-auto flex min-h-[calc(100vh-2px)] w-full max-w-3xl flex-col px-6">
+          <Header />
+          <main className="flex-1 py-12">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

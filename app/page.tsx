@@ -1,55 +1,48 @@
-"use client";
-import React, { useState } from "react";
-import { ReactTyped } from "react-typed";
 import Link from "next/link";
+import LogCard from "@/components/LogCard";
+import { site } from "@/config/nav";
+import { getLogs } from "@/lib/logs";
 
-const LandingPage: React.FC = () => {
-  const [typed, setTyped] = useState(false);
+export default function HomePage() {
+  const [latest] = getLogs();
+
   return (
-    <>
-      <div className="container mx-auto break-after-auto">
-        <p className="text-5xl font-bold mb-4">
-          <ReactTyped
-            strings={["Leo You"]}
-            typeSpeed={100}
-            backSpeed={50}
-            backDelay={1000}
-            showCursor={false}
-            onBegin={() => setTyped(false)}
-            onComplete={() => setTyped(true)}
-          />
-        </p>
-        {typed && (
-          <ul className="list-none mt-4 space-y-2 text-lg">
-            <li className="flex items-center">
-              <span className="blue-emph mr-2">{">"}</span>
-              <Link href="/experience" className="underline">
-                Experience
-              </Link>
-            </li>
-            <li className="flex items-center">
-              <span className="red-emph mr-2">{">"}</span>
-              <Link href="/hobbies" className="underline">
-                Hobbies
-              </Link>
-            </li>
-            <li className="flex items-center">
-              <span className="blue-emph mr-2">{">"}</span>
-              Download my ✨
-              <a
-                href="/resume.pdf"
-                download="leo_you_resume.pdf"
-                className="underline"
-              >
-                Resume
-              </a>
-              ✨
-            </li>
-          </ul>
-        )}
-      </div>
-    </>
-  );
-};
+    <div>
+      <p className="text-sm uppercase tracking-[0.18em] text-accent-2">
+        {site.course}
+      </p>
+      <h1 className="mt-3 text-4xl font-semibold tracking-tight">
+        Group 30 project log
+      </h1>
+      <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted">
+        Progress notes for a University of Waterloo mechatronics capstone
+        project. Project details will land here as the brief firms up.
+      </p>
 
-export default LandingPage;
+      <div className="mt-8 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+        <Link href="/logs/" className="text-accent-2 underline underline-offset-4">
+          All logs
+        </Link>
+        <Link href="/project/" className="text-muted underline underline-offset-4 hover:text-fg">
+          Project overview
+        </Link>
+        <Link href="/team/" className="text-muted underline underline-offset-4 hover:text-fg">
+          Team
+        </Link>
+      </div>
+
+      <section className="mt-14">
+        <h2 className="text-sm uppercase tracking-[0.18em] text-muted">
+          Latest log
+        </h2>
+        <div className="mt-4">
+          {latest ? (
+            <LogCard log={latest} />
+          ) : (
+            <p className="text-muted">No logs published yet.</p>
+          )}
+        </div>
+      </section>
+    </div>
+  );
+}
