@@ -3,7 +3,7 @@ export const site = {
   title: "G30 Capstone",
   description:
     "Progress log for Mechatronics Engineering Capstone Group 30 at the University of Waterloo.",
-  course: "Mechatronics Engineering Capstone",
+  course: "2026 Mechatronics Engineering Capstone",
   school: "University of Waterloo",
 };
 

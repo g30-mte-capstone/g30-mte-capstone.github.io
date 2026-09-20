@@ -20,20 +20,6 @@ export default function ProjectPage() {
             constraints that will shape the solution.
           </p>
         </div>
-        <div>
-          <h2 className="text-xl font-semibold tracking-tight">Goals</h2>
-          <p className="mt-2 leading-relaxed text-muted">
-            Project goals, success metrics, and deliverables will be listed
-            here.
-          </p>
-        </div>
-        <div>
-          <h2 className="text-xl font-semibold tracking-tight">Approach</h2>
-          <p className="mt-2 leading-relaxed text-muted">
-            Hardware, software, and integration plans will live on this page
-            as they stabilize. Weekly movement is recorded in the logs.
-          </p>
-        </div>
       </section>
     </div>
   );

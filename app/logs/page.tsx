@@ -13,7 +13,7 @@ export default function LogsPage() {
     <div>
       <h1 className="text-3xl font-semibold tracking-tight">Logs</h1>
       <p className="mt-3 text-muted">
-        Newest first. More than one entry per week is fine.
+        Project updates
       </p>
 
       {logs.length === 0 ? (
