@@ -22,6 +22,13 @@ Suggested filename: `YYYY-MM-DD-short-title.md` (you can post more than once on 
 
 -
 
+## Individual Contributions
+
+- **Trinity Hsu:**
+- **Hannah Lamarche:**
+- **Dennis Lee:**
+- **Leo You:**
+
 ## Decisions / learnings
 
 -
