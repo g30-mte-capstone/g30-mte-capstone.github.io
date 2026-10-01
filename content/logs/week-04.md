@@ -1,5 +1,5 @@
 ---
-title: "Requirements review and initial design research"
+title: "Problem formation review and components research"
 date: 2026-10-01
 authors: ["Hannah Lamarche"]
 status: "on-track"
