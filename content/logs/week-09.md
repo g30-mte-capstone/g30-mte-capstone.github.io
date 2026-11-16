@@ -22,9 +22,9 @@ tags: ["testing", "connectivity", "hardware", "prototyping", "calculations"]
 
 ## Individual contributions
 
+- **Trinity Hsu:** Tested the motors with Dennis and contributed to the power-supply calculations
 - **Hannah Lamarche:** Tested the Raspberry Pi connection through a mobile hotspot to support portable operation
 - **Dennis Lee:** Tested the motors with Trinity and completed power-supply calculations
-- **Trinity Hsu:** Tested the motors with Dennis and contributed to the power-supply calculations
 - **Leo You:** Began prototyping the camera and Raspberry Pi housing
 
 ## Decisions / learnings
