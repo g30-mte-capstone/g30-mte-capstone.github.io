@@ -16,7 +16,7 @@ tags: ["connectivity", "motor-testing", "power-supply", "CAD", "P0"]
 
 - Performed connectivity tests across the system and identified bugs for further investigation
 - Tested motor commands from the Raspberry Pi through the ESP to the motors; found that, with the current wiring, the motors appear to spin in only one direction regardless of the command
-- Order a power supply then received it late in the week, removing a major constraint on hardware testing (no more reliance on campus facility hours)
+- Ordered a power supply then received it late in the week, removing a major constraint on hardware testing (no more reliance on campus facility hours)
 - Continued CAD work for the P0 peg board and component mounts
 - Started preparing materials and design updates for next week's Design Verification & Revision Checking meeting
 
@@ -43,4 +43,4 @@ tags: ["connectivity", "motor-testing", "power-supply", "CAD", "P0"]
 - Trace the motor-control path from the Raspberry Pi through the ESP and wiring to identify why reverse commands do not change direction
 - Continue end-to-end connectivity and hardware testing with the new power supply
 - Finalize the P0 CAD mounts and 3D print them
-- Incorporate feedback from the Design Verification & Revision Checking meeting into the Final Design Presentation and Report
+- Incorporate feedback from the Design Verification & Revision Checking meeting into the Final Design Presentation (FDP) and Report (FDR)
